@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+streamlit.log
+streamlit-error.log
+streamlit.pid
+video_app_capture.png
+video_preview.png

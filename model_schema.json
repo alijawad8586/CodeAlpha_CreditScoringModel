@@ -1,0 +1,222 @@
+{
+  "fields": [
+    {
+      "name": "checking_status",
+      "kind": "category",
+      "default": "no checking",
+      "options": [
+        "0<=X<200",
+        "<0",
+        ">=200",
+        "no checking"
+      ]
+    },
+    {
+      "name": "duration",
+      "kind": "number",
+      "default": 18.0,
+      "min": 4.0,
+      "max": 72.0
+    },
+    {
+      "name": "credit_history",
+      "kind": "category",
+      "default": "existing paid",
+      "options": [
+        "all paid",
+        "critical/other existing credit",
+        "delayed previously",
+        "existing paid",
+        "no credits/all paid"
+      ]
+    },
+    {
+      "name": "purpose",
+      "kind": "category",
+      "default": "radio/tv",
+      "options": [
+        "business",
+        "domestic appliance",
+        "education",
+        "furniture/equipment",
+        "new car",
+        "other",
+        "radio/tv",
+        "repairs",
+        "retraining",
+        "used car"
+      ]
+    },
+    {
+      "name": "credit_amount",
+      "kind": "number",
+      "default": 2319.5,
+      "min": 250.0,
+      "max": 18424.0
+    },
+    {
+      "name": "savings_status",
+      "kind": "category",
+      "default": "<100",
+      "options": [
+        "100<=X<500",
+        "500<=X<1000",
+        "<100",
+        ">=1000",
+        "no known savings"
+      ]
+    },
+    {
+      "name": "employment",
+      "kind": "category",
+      "default": "1<=X<4",
+      "options": [
+        "1<=X<4",
+        "4<=X<7",
+        "<1",
+        ">=7",
+        "unemployed"
+      ]
+    },
+    {
+      "name": "installment_commitment",
+      "kind": "number",
+      "default": 3.0,
+      "min": 1.0,
+      "max": 4.0
+    },
+    {
+      "name": "personal_status",
+      "kind": "category",
+      "default": "male single",
+      "options": [
+        "female div/dep/mar",
+        "male div/sep",
+        "male mar/wid",
+        "male single"
+      ]
+    },
+    {
+      "name": "other_parties",
+      "kind": "category",
+      "default": "none",
+      "options": [
+        "co applicant",
+        "guarantor",
+        "none"
+      ]
+    },
+    {
+      "name": "residence_since",
+      "kind": "number",
+      "default": 3.0,
+      "min": 1.0,
+      "max": 4.0
+    },
+    {
+      "name": "property_magnitude",
+      "kind": "category",
+      "default": "car",
+      "options": [
+        "car",
+        "life insurance",
+        "no known property",
+        "real estate"
+      ]
+    },
+    {
+      "name": "age",
+      "kind": "number",
+      "default": 33.0,
+      "min": 19.0,
+      "max": 75.0
+    },
+    {
+      "name": "other_payment_plans",
+      "kind": "category",
+      "default": "none",
+      "options": [
+        "bank",
+        "none",
+        "stores"
+      ]
+    },
+    {
+      "name": "housing",
+      "kind": "category",
+      "default": "own",
+      "options": [
+        "for free",
+        "own",
+        "rent"
+      ]
+    },
+    {
+      "name": "existing_credits",
+      "kind": "number",
+      "default": 1.0,
+      "min": 1.0,
+      "max": 4.0
+    },
+    {
+      "name": "job",
+      "kind": "category",
+      "default": "skilled",
+      "options": [
+        "high qualif/self emp/mgmt",
+        "skilled",
+        "unemp/unskilled non res",
+        "unskilled resident"
+      ]
+    },
+    {
+      "name": "num_dependents",
+      "kind": "number",
+      "default": 1.0,
+      "min": 1.0,
+      "max": 2.0
+    },
+    {
+      "name": "own_telephone",
+      "kind": "category",
+      "default": "none",
+      "options": [
+        "none",
+        "yes"
+      ]
+    },
+    {
+      "name": "foreign_worker",
+      "kind": "category",
+      "default": "yes",
+      "options": [
+        "no",
+        "yes"
+      ]
+    }
+  ],
+  "best_model": "Random Forest",
+  "best_roc_auc": 0.8082142857142857,
+  "raw_columns": [
+    "checking_status",
+    "duration",
+    "credit_history",
+    "purpose",
+    "credit_amount",
+    "savings_status",
+    "employment",
+    "installment_commitment",
+    "personal_status",
+    "other_parties",
+    "residence_since",
+    "property_magnitude",
+    "age",
+    "other_payment_plans",
+    "housing",
+    "existing_credits",
+    "job",
+    "num_dependents",
+    "own_telephone",
+    "foreign_worker"
+  ]
+}

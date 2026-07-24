@@ -1,86 +1,70 @@
-# Credit Scoring Model
+# Credit Risk Scoring — Machine Learning App
 
-## Overview
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This project predicts whether a customer is creditworthy based on historical financial information using machine learning classification algorithms.
+A portfolio-ready, bank-style machine-learning decision-support project that
+predicts lower-risk (`0`) or higher-risk (`1`) credit customers.
 
-This project was developed as part of the CodeAlpha Machine Learning Internship.
+The project uses the German Credit dataset (`credit-g`, OpenML dataset 31),
+performs feature engineering, compares Logistic Regression, Decision Tree, and
+Random Forest, and saves the model with the highest test ROC-AUC.
 
----
+> Educational decision-support demo only. It is not a production lending
+> system or an automated loan-approval tool.
 
-## Features
+## Highlights
 
-- Data preprocessing
-- Feature engineering
-- Classification models
-- Model evaluation
-- Performance comparison
+- Cleaning, validation, and duplicate removal
+- Domain-inspired feature engineering
+- Reusable preprocessing and classification pipeline
+- Accuracy, precision, recall, F1, ROC-AUC, confusion matrix, and ROC curves
+- Streamlit applicant-assessment interface
+- Automated unit tests
 
----
+## Quick start
 
-## Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Seaborn
-
----
-
-## Machine Learning Algorithms
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-
----
-
-## Evaluation Metrics
-
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-
----
-
-## Dataset
-
-Financial dataset containing:
-
-- Income
-- Credit History
-- Loan Amount
-- Debt
-- Payment History
-
----
-
-## Project Structure
-
-```
-CreditScoringModel/
-│
-├── dataset/
-├── notebooks/
-├── models/
-├── images/
-├── requirements.txt
-├── CreditScoringModel.ipynb
-└── README.md
+```powershell
+git clone https://github.com/alijawad8586/codealpha-credit-risk-scoring.git
+cd codealpha-credit-risk-scoring
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -3 -m pip install -r requirements.txt
+py -3 train_model.py
+py -3 -m streamlit run app.py
 ```
 
----
+Open the local URL shown by Streamlit, normally `http://localhost:8501`.
 
-## Results
+## Test
 
-The trained model predicts customer creditworthiness with high accuracy after preprocessing and feature engineering.
+```powershell
+py -3 -m pytest -q
+```
 
----
+## Project structure
 
-## Internship
+```text
+.
+|-- app.py
+|-- train_model.py
+|-- test_credit_scoring.py
+|-- credit_scoring_model.ipynb
+|-- credit_scoring_model.pkl
+|-- model_results.csv
+|-- model_schema.json
+|-- requirements.txt
+`-- images/
+```
 
-CodeAlpha Machine Learning Internship
+## Responsible use
+
+The model is trained on a public benchmark dataset and may encode historical
+bias. Do not use its output for real lending, eligibility, or adverse-action
+decisions. Production use would require governance, fairness evaluation,
+calibration, monitoring, security controls, and human review.
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
